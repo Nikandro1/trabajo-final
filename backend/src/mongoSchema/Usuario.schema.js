@@ -13,22 +13,12 @@ const usuarioSchema = new mongoose.Schema({
         type: Schema.Types.String,
     },
     tarea: [
-        {
-            titulo: {
-                type: Schema.Types.String,
-                required: true,
-                minlength: 1,
-                maxlength: 255
-            }
-        }
-        {
-            descripcion: {
-                type: Schema.Types.String,
-                required: true,
-                minlength: 1,
-                maxlength: 255
-            }
-        }
+        { titulo: { type: Schema.Types.String, required: true, minlength: 1, maxlength: 255 } },
+        { descripcion: { type: Schema.Types.String, required: true, minlength: 1, maxlength: 255 } },
+        { fechaLimite:{
+            type: Schema.Types.Date,
+            required: true
+        }}
     ]
 })
 

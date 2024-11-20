@@ -2,7 +2,6 @@ const Usuario = require('../mongoSchema/Usuario.schema')
 const Tarea = require('../mongoSchema/tarea.schema')
 const mongoose = require('mongoose')
 const mongoose = require("../db/mongo.db").mongoose;
-//const { $_match } = require('../schemas/producto.schema')
 const controller = {}
 
 
@@ -43,3 +42,6 @@ const deleteUsuario = async (req,res)=>{
     res.status(200).json(`El usuario con id ${idUsuario} ha sido eliminado`)
 }
 controller.deleteUsuario = deleteUsuario
+
+
+module.exports = controller

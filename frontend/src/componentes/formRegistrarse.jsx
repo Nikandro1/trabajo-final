@@ -11,10 +11,10 @@ export default function FormRegistro() {
       </div>
       <form action="">
         <div className="inputNombre">
-          <input type="email" placeholder="Nombre" />
+          <input type="email" placeholder="Nombre" required="true"/>
         </div>
         <div className="inputContraseña">
-          <input type="password" placeholder="Contraseña" />
+          <input type="password" placeholder="Contraseña" required="true"/>
         </div>
         <div className="botones">
           <button className="registrarse">Registrarse</button>

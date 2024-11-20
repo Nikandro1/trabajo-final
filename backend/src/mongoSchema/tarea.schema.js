@@ -14,6 +14,10 @@ const tareaSchema= new mongoose.Schema({
         required:true,
         minlength:1,
         maxlength:255
+    },
+    fechaLimite:{
+        type: Schema.Types.Date,
+        required: true
     }
 })
 

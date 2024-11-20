@@ -2,17 +2,25 @@ const Usuario = require('../mongoSchema/Usuario.schema')
 const Tarea = require('../mongoSchema/tarea.schema')
 const mongoose = require('mongoose')
 const mongoose = require("../db/mongo.db").mongoose;
-//const { $_match } = require('../schemas/producto.schema')
 const controller = {}
 
 
-const getUsuarioById = async (req,res) =>{
-    const idUsuario = req.params.id
-    const usuario = await Usuario.findAll()
-    res.status(200).json(usuario)
+const createTarea = async (req,res) =>{
+    const tarea = await Tarea.create(
+        req.body
+    )
+    res.status(200).json(tarea)
 }
 
-controller.getUsuarioById = getUsuarioById
+controller.createTarea = createTarea
+
+
+
+const deleteTarea = async (req,res)=>{
+    const idTarea = req.params.id
+    const tarea = await Tarea.findByIdAndDelete(idTarea)
+    res.status(200).json('Tarea eliminada correctamente')
+}
 
 const addTareaToUsuario = async (req,res)=>{
     const idusuario = req.paramas.id

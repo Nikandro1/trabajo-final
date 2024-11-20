@@ -11,6 +11,9 @@ export default function FormTarea () {
         <div className="inputDescripcion">
           <input type="text" placeholder='Descripción'/>
         </div>
+        <div className="inputFecha">
+          <input type="date" placeholder='Fecha limite'/>
+        </div>
         <button>Añadir</button>
       </form>
     </div>
