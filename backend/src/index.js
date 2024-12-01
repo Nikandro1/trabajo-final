@@ -2,7 +2,7 @@ const express = require("express");
 const { connectToDatabase } = require("./db/mongo.db"); // Solo traemos la conexión
 const rutas = require("./routes/tarea.routes");
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const cors = require("cors");
 
 app.use(cors());
