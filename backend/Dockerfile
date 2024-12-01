@@ -2,7 +2,7 @@ FROM node:20.10.0-alpine
 
 WORKDIR /app
 
-COPY package.json .
+COPY backend/package.json .
 RUN npm install
 COPY . .
 EXPOSE 3001
