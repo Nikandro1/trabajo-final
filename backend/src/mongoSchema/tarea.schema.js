@@ -22,6 +22,6 @@ const tareaSchema= new mongoose.Schema({
 })
 
 
-const Usuario = mongoose.model("Tarea", tareaSchema)
+const Tarea = mongoose.model("Tarea", tareaSchema)
 
 module.exports = Tarea

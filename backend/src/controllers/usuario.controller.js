@@ -1,7 +1,7 @@
 const Usuario = require('../mongoSchema/Usuario.schema')
 const Tarea = require('../mongoSchema/tarea.schema')
-const mongoose = require('mongoose')
-const mongoose = require("../db/mongo.db").mongoose;
+//const mongoose = require('mongoose')
+//const mongoose = require("../db/mongo.db").mongoose;
 const controller = {}
 
 

@@ -1,36 +1,21 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import FormLogin from "./components/FormLogin";
-import FormRegistro from "./components/FormRegistro";
-import TaskList from "./components/TaskList";
-import FormTarea from "./components/FormTarea";
-import ProtectedRoute from "./components/ProtectedRoute";
+import Inicio from "./pages/Inicio";
+import AgregarTarea from "./pages/AgregarTarea";
+import "bootstrap/dist/css/bootstrap.min.css";
+import EditarTarea from "./pages/EditarTarea";
+import "./componentes/estilos.css"
 
 export default function App() {
-  return (
-      <Router>
-          <Routes>
-              {/* Rutas públicas */}
-              <Route path="/" element={<FormLogin />} />
-              <Route path="/register" element={<FormRegistro />} />
-              {/* Rutas protegidas */}
-              <Route
-                  path="/tasks"
-                  element={
-                      <ProtectedRoute>
-                          <TaskList />
-                      </ProtectedRoute>
-                  }
-              />
-              <Route
-                  path="/add-task"
-                  element={
-                      <ProtectedRoute>
-                          <FormTarea />
-                      </ProtectedRoute>
-                  }
-              />
-          </Routes>
-      </Router>
-  );
+    return (
+        <Router>
+            <div className="app-container">
+                <Routes>
+                    <Route path="/" element={<Inicio />} />
+                    <Route path="/agregarTarea" element={<AgregarTarea />} />
+                    <Route path="/editarTarea/:id" element={<EditarTarea />} />
+                </Routes>
+            </div>
+        </Router>
+    );
 }
