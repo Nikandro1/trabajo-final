@@ -8,11 +8,11 @@ npm i  -Instala todas las dependencia necesarias-
 docker compose up -d  -Levanta el contenedor en docker-
 npm run dev  -Corre la aplicación-
 
-###Frontend
+### Frontend
 npm i  -Instala todas las dependencia necesarias-
 npm run dev  -Corre la aplicación-
 
-##Integrantes del grupo
+## Integrantes del grupo
 Benoit Nicolás
 Premat Matías
 Primorac Carlos
