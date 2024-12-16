@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function NuevaTarea() {
 
-    const API_URL = "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app/"
+    const API_URL = "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app"
 
     const [formData, setFormData] = useState({
         titulo: "",
