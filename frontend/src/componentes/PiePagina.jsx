@@ -25,31 +25,16 @@ export default function PiePagina() {
                                     href="mailto:nico_benoit@hotmail.com.ar"
                                     className="text-white"
                                 >
-                                    nicolas.benoit@example.com
+                                    nico_benoit@hotmail.com.ar
                                 </a>
                             </p>
-                            <p>
-                                <a
-                                    href="mailto:nico_benoit@hotmail.com.ar"
-                                    className="text-white"
-                                >
-                                    matiaspremat5@gmail.com
-                                </a>
-                            </p>
-                            <p>
-                                <a
-                                    href="mailto:nico_benoit@hotmail.com.ar"
-                                    className="text-white"
-                                >
-                                    carlosprimorac@gmail.com
-                                </a>
-                            </p>
+                            
                         </div>
                     </div>
 
                     <div className="text-center mt-4">
                         <p>
-                            &copy; 2024 Nicolás Benoit, Matías Premat, Carlos Primorac. Todos los derechos
+                            &copy; 2024 Nicolás Benoit. Todos los derechos
                             reservados.
                         </p>
                     </div>

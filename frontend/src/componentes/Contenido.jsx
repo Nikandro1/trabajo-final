@@ -6,6 +6,8 @@ import "./estilos.css";
 export default function Contenido() {
     const [tareas, setTareas] = useState([]);
     const navigate = useNavigate();
+    const API_URL = "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app/"
+
 
     /*METODO PARA MODIFICAR TAREA CON EL BOTON*/
     const HandleClickUpdate = (id) => {
@@ -14,7 +16,7 @@ export default function Contenido() {
     /*METODO PARA BORRAR TAREA CON EL BOTON*/
     const HandleDelete = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3001/tarea/${id}`, {
+            const response = await fetch(`${API_URL}/tarea/${id}`, {
                 method: "DELETE",
             });
             if (response.ok) {
@@ -31,7 +33,7 @@ export default function Contenido() {
 
     async function cargarTareas() {
         try {
-            const response = await fetch("http://localhost:3001/tarea");
+            const response = await fetch(`${API_URL}/tarea/`);
             const data = await response.json();
             setTareas(data);
         } catch (error) {

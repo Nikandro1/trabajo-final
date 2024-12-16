@@ -5,6 +5,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./estilos.css";
 
 export default function Modificar() {
+
+    const API_URL = "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app/"
     const [formData, setFormData] = useState({
         titulo: "",
         descripcion: "",
@@ -23,7 +25,7 @@ export default function Modificar() {
     const handleSubmit = async (e) => {
         e.preventDefault(); 
 
-        const url = id ? `http://localhost:3001/tarea/${id}` : "http://localhost:3001/tarea"; // Usar URL de editar si hay id
+        const url = id ? `${API_URL}/tarea/${id}` : `${API_URL}/tarea`; 
         const method = id ? "PUT" : "POST"; 
 
         try {
@@ -54,7 +56,7 @@ export default function Modificar() {
         if (id) {
             async function cargarTarea() {
                 try {
-                    const response = await fetch(`http://localhost:3001/tarea/${id}`);
+                    const response = await fetch(`${API_URL}/tarea/${id}`);
                     const data = await response.json();
                     setFormData(data); // Pre-cargar los datos de la tarea en el formulario
                 } catch (error) {

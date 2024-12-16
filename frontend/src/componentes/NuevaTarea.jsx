@@ -4,6 +4,9 @@ import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 
 export default function NuevaTarea() {
+
+    const API_URL = "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app/"
+
     const [formData, setFormData] = useState({
         titulo: "",
         descripcion: "",
@@ -22,7 +25,7 @@ export default function NuevaTarea() {
         e.preventDefault(); // Evitar recarga de la página
 
         try {
-            const response = await fetch("http://localhost:3001/tarea", {
+            const response = await fetch(`${API_URL}/tarea`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

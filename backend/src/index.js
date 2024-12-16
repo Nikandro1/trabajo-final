@@ -1,11 +1,16 @@
 const express = require("express");
-const { connectToDatabase } = require("./db/mongo.db"); // Solo traemos la conexión
+const { connectToDatabase } = require("./db/mongo.db");
 const rutas = require("./routes/tarea.routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
 const cors = require("cors");
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app/",
+        methods: ["GET", "POST", "PUT", "DELETE"],
+    }
+));
 app.use(express.json());
 app.use(rutas);
 
