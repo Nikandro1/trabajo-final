@@ -9,6 +9,7 @@ app.use(cors({
     origin: [
         "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app",
         "https://lista-de-tareas-ail068200-nicolas-benoits-projects.vercel.app",
+        "https://lista-de-tareas-ashen.vercel.app"
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ['Content-Type', 'Authorization'],
