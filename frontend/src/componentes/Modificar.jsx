@@ -49,7 +49,6 @@ export default function Modificar() {
             alert("Error en la solicitud");
         }
     };
-    // Cargar los datos de la tarea si estamos editando
     useEffect(() => {
         if (id) {
             async function cargarTarea() {
