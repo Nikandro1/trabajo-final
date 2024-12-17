@@ -5,15 +5,14 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const cors = require("cors");
 
-app.use(cors(
-    {
-        origin: [
-            "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app",
-            "https://lista-de-tareas-ail068200-nicolas-benoits-projects.vercel.app",
-        ],
-        methods: ["GET", "POST", "PUT", "DELETE"],
-    }
-));
+app.use(cors({
+    origin: [
+        "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app",
+        "https://lista-de-tareas-ail068200-nicolas-benoits-projects.vercel.app",
+    ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 app.use(express.json());
 app.use(rutas);
 
