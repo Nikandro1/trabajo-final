@@ -7,7 +7,10 @@ const cors = require("cors");
 
 app.use(cors(
     {
-        origin: "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app",
+        origin: [
+            "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app",
+            "https://lista-de-tareas-ail068200-nicolas-benoits-projects.vercel.app",
+        ],
         methods: ["GET", "POST", "PUT", "DELETE"],
     }
 ));
