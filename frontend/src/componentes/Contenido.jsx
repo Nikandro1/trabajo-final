@@ -6,7 +6,7 @@ import "./estilos.css";
 export default function Contenido() {
     const [tareas, setTareas] = useState([]);
     const navigate = useNavigate();
-    const API_URL = "https://lista-de-tareas-fu7t5dnuh-nicolas-benoits-projects.vercel.app"
+    const API_URL = "https://trabajofinal-brjl.onrender.com/"
 
 
     /*METODO PARA MODIFICAR TAREA CON EL BOTON*/
