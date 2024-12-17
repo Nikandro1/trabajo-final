@@ -1,0 +1,11 @@
+[
+  {
+    "applyTo": "tarea",
+    "headers": [
+      {
+        "name": "access-control-allow-origin",
+        "value": "*"
+      }
+    ]
+  }
+]
