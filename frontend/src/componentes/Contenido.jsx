@@ -6,7 +6,7 @@ import "./estilos.css";
 export default function Contenido() {
     const [tareas, setTareas] = useState([]);
     const navigate = useNavigate();
-    const API_URL = "https://trabajofinal-brjl.onrender.com/"
+    const API_URL = "https://trabajofinal-brjl.onrender.com"
 
 
     /*METODO PARA MODIFICAR TAREA CON EL BOTON*/
@@ -33,7 +33,7 @@ export default function Contenido() {
 
     async function cargarTareas() {
         try {
-            const response = await fetch(`${API_URL}/tarea/`);
+            const response = await fetch(`${API_URL}/tarea`);
             const data = await response.json();
             setTareas(data);
         } catch (error) {

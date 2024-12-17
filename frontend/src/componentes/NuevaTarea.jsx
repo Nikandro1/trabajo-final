@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function NuevaTarea() {
 
-    const API_URL = "https://trabajofinal-brjl.onrender.com/"
+    const API_URL = "https://trabajofinal-brjl.onrender.com"
 
     const [formData, setFormData] = useState({
         titulo: "",

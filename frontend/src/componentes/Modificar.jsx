@@ -6,7 +6,7 @@ import "./estilos.css";
 
 export default function Modificar() {
 
-    const API_URL = "https://trabajofinal-brjl.onrender.com/"
+    const API_URL = "https://trabajofinal-brjl.onrender.com"
     const [formData, setFormData] = useState({
         titulo: "",
         descripcion: "",
